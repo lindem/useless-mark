@@ -1,0 +1,36 @@
+{
+  "name": "ts-setup",
+  "version": "1.0.0",
+  "description": "basic typescript module setup using mocha/chai as testrunner",
+  "main": "index.js",
+  "scripts": {
+    "test-coverage": "nyc mocha -r ts-node/register tests/**/*-test.ts -r ts-node/register tests/*-test.ts",
+    "test": "mocha -r ts-node/register tests/**/*-test.ts -r ts-node/register tests/*-test.ts",
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "rebuild": "npm rum clean && npm run build"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "**/*.js"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "all": true
+  },
+  "author": "Timo Lindemann <coffeeprocessor@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "nyc": "^12.0.2",
+    "rimraf": "^2.6.2",
+    "ts-node": "^6.1.0",
+    "typescript": "^2.9.1"
+  }
+}
