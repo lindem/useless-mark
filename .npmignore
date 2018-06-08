@@ -1,0 +1,5 @@
+# Files and directories to ignore when publishing to npm
+
+coverage
+.nyc_output
+.vscode
