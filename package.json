@@ -27,7 +27,10 @@
   "author": "Timo Lindemann <coffeeprocessor@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^4.1.3",
+    "@types/mocha": "^5.2.1",
     "chai": "^4.1.2",
+    "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "rimraf": "^2.6.2",
     "ts-node": "^6.1.0",
