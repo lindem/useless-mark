@@ -1,7 +1,7 @@
 {
-  "name": "ts-setup",
-  "version": "1.0.0",
-  "description": "basic typescript module setup using mocha/chai as testrunner",
+  "name": "useless-mark",
+  "version": "0.0.1",
+  "description": "benchmark for disk performance",
   "main": "index.js",
   "scripts": {
     "test-coverage": "nyc mocha -r ts-node/register tests/**/*-test.ts -r ts-node/register tests/*-test.ts",
@@ -29,11 +29,17 @@
   "devDependencies": {
     "@types/chai": "^4.1.3",
     "@types/mocha": "^5.2.1",
+    "@types/node": "^10.3.3",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "rimraf": "^2.6.2",
     "ts-node": "^6.1.0",
     "typescript": "^2.9.1"
+  },
+  "dependencies": {
+    "@types/mz": "^0.0.32",
+    "@types/rimraf": "^2.0.2",
+    "mz": "^2.7.0"
   }
 }
