@@ -30,3 +30,10 @@ Host: aphelion; linux(x64)
 ----------------------------------------
  11225 ms total
 ```
+
+## How to use
+
+- clone this repository
+- use `yarn`
+- use `npm run build`
+- you can now run benchmark.js, provided it is set executable (`+x`).
