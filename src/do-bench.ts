@@ -6,19 +6,19 @@ export async function shellcommands() {
 
   return rimrafPromise('node_modules', {})
     .then(({elapsed}) => {
-      timerecords.push({name: 'rimraf node_modules', elapsed});
+      timerecords.push({name: '1st rimraf node_modules', elapsed});
       return timedShellCommandPromise('yarn', {});
     })
     .then(({elapsed}) => {
-      timerecords.push({name: 'yarn', elapsed});
+      timerecords.push({name: '1st yarn (cache potentially cold)', elapsed});
       return rimrafPromise('node_modules', {});
     })
     .then(({elapsed}) => {
-      timerecords.push({name: '2. rimraf node_modules', elapsed});
+      timerecords.push({name: '2nd rimraf node_modules', elapsed});
       return timedShellCommandPromise('yarn', {});
     })
     .then(({elapsed}) => {
-      timerecords.push({name: '2. yarn (cache ist warm!)', elapsed});
+      timerecords.push({name: '2nd yarn (cache warm)', elapsed});
       return timedShellCommandPromise('ember test', {});
     })
     .then(({elapsed}) => {

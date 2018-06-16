@@ -1,7 +1,7 @@
 {
   "name": "useless-mark",
   "version": "0.0.1",
-  "description": "benchmark for disk performance",
+  "description": "benchmark for general build performance",
   "main": "index.js",
   "scripts": {
     "test-coverage": "nyc mocha -r ts-node/register tests/**/*-test.ts -r ts-node/register tests/*-test.ts",
